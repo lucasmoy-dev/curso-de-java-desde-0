@@ -6,11 +6,14 @@ import academy.atl.gestionclientes.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ClienteService implements IClienteService {
 
+    @Autowired
+    private IEmailService emailService;
     @Autowired
     private ClienteRepository repository;
 
@@ -27,6 +30,11 @@ public class ClienteService implements IClienteService {
     @Override
     public void save(Cliente cliente) {
         repository.save(cliente);
+        String asunto = "Su cuenta se creo correctamente";
+        List<String> to = new ArrayList<>();
+        to.add(cliente.getEmail());
+
+        emailService.enviarEmailDeBienvenida(asunto, to, cliente.getNombre());
     }
 
     @Override
