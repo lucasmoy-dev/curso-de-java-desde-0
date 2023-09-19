@@ -23,6 +23,12 @@
 			<artifactId>jakarta.mail-api</artifactId>
 			<version>2.0.0</version>
 		</dependency-->
+		<!-- https://mvnrepository.com/artifact/com.mailjet/mailjet-client -->
+		<dependency>
+			<groupId>com.mailjet</groupId>
+			<artifactId>mailjet-client</artifactId>
+			<version>5.2.4</version>
+		</dependency>
 
 		<dependency>
 			<groupId>javax.mail</groupId>
