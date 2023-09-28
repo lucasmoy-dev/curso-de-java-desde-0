@@ -32,6 +32,7 @@ public class RoverController {
         System.out.println(commands);
 
         for (String command:commands.getCommands()) {
+            service.sendCommand(command);
             System.out.println(command);
         }
     }
