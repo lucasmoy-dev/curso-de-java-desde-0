@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="control-panel">
+        <img onclick="clickBtnRotateLeft()" class="btn-control" src="images/rotate-left.png" />
+        <img onclick="moveForward()" class="btn-control" src="images/forward.png" />
+        <img onclick="moveBack()" class="btn-control" src="images/back.png" />
+        <img onclick="clickBtnRotateRight()" class="btn-control" src="images/rotate-right.png" />
+
+    </div>
+    <div id="container">
+        <img id="rover" src="images/robot.png" />
+        <div id="map">
+            <img src="images/map.jpg" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
